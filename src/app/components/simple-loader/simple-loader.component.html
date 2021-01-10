@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="first-rxjs" fxLayout="column">
+    <div class="title">
+      operators: interval, tap, take, finalize, of
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="startLoader()" [disabled]="disabledButton$ | async">Start</button>
+      <button mat-raised-button color="primary" (click)="stopLoader()">Stop</button>
+    </div>
+    <div class="parent-loader">
+      <div class="line-not-loaded" fxLayoutAlign="center center">
+        <div class="zIndex">{{ (interval$ | async) || 0 }}%</div>
+      </div>
+      <div class="loader" [ngStyle]="{'width': intervalWith * 8 + 'px'}"></div>
+    </div>
+  </div>
+  <portfolio-code-screens [screenHrefs]="screenHrefsLoader"></portfolio-code-screens>
+</div>

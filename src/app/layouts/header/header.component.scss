@@ -1,0 +1,10 @@
+@import "~assets/scss/palette";
+
+.header-layout {
+  height: 56px;
+  padding: 8px 16px;
+  width: 100%;
+  background: $header-color;
+  color: $white;
+  box-shadow: 0 2px 15px -8px #000000;
+}

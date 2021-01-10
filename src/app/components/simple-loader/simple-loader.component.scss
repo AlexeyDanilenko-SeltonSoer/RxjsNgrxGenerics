@@ -1,0 +1,36 @@
+@import "~assets/scss/palette";
+
+.container {
+  height: 100%;
+  .title {
+    margin-bottom: 10px;
+  }
+  .first-rxjs {
+    margin-top: 20px;
+  }
+
+  .parent-loader {
+    position: relative;
+    .line-not-loaded {
+      width: 800px;
+      height: 30px;
+      background: $line-not-loader;
+      .zIndex {
+        z-index: 1;
+        color: $on-loader-text;
+      }
+    }
+    .loader {
+      position: absolute;
+      top: 0;
+      height: 30px;
+      transition: 300ms;
+      color: $white;
+      background: $gradient-loader;
+    }
+  }
+  button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}

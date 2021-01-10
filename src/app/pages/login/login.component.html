@@ -1,0 +1,13 @@
+<div class="login" *ngIf="!(token | async)">
+  <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="form" (ngSubmit)="login()">
+    <mat-form-field>
+      <mat-label>Login</mat-label>
+      <input matInput formControlName="login">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+</div>
